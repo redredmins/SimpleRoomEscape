@@ -145,10 +145,11 @@ public class RSPGameManager : MonoBehaviour
 
         imgPcHand.sprite = handSprites[pcHandInt];
         
-        GameResult result = GetGameResult(myHand, pcHand);
+        GameResult result;
+        result = GetGameResult(myHand, pcHand);
         switch(result)
         {
-            case GameResult.Win:
+            case GameResult.Win: // if (result == GameResult.Win)
                 allWin += 1;
                 txtGameResult.text = "이겼다!!!";
                 break;
@@ -165,6 +166,7 @@ public class RSPGameManager : MonoBehaviour
         
         txtGameResult.color = gameResultTextColors[(int)result];
         
+        //string r = "총 " + allGame + " 회 대결\n" + allWin + "회 승 | " + allLose + "회 패";
         string resultText = "총 {0} 회 대결\n<size=40><color=#00C8E5>{1}회 승</color> | {2}회 패</size>";
         txtAllResult.text = string.Format(resultText, allGame, allWin, allLose);
     }

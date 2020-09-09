@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject escapePopup;
+    public Transform inventory;
+    public GameObject itemSlotPrefab;
     public Text txtNotice;
 
     bool hasKey;
@@ -116,6 +118,15 @@ public class GameManager : MonoBehaviour
                 ShowNotice("열쇠를 얻었습니다.");
                 break;
         }
+
+        Image itemImg = item.GetComponent<Image>();
+        GameObject slotObj = Instantiate(itemSlotPrefab, inventory);
+        
+        RectTransform slotTrans = slotObj.GetComponent<RectTransform>();
+        slotTrans.anchoredPosition = new Vector2(0f, 0f);
+
+        UIItemSlot slot = slotObj.GetComponent<UIItemSlot>();
+        slot.UpdateSlot(itemImg.sprite);
     }
 
     public void SetPopupOn(bool isOn)

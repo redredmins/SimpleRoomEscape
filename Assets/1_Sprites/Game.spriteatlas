@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Game
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 623b8327958789d4ab5ee072697eb5d8, type: 3}
+    totalSpriteSurfaceArea: 2380554
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 20624ee09b5b8704984f8bdaa9e64251, type: 3}
+  - {fileID: 21300000, guid: 43b70df07eec0c84e83f1df7a0f2d4d7, type: 3}
+  - {fileID: 21300000, guid: fa7eef91bd342bb408b5afca46658288, type: 3}
+  - {fileID: 21300000, guid: 05a1a906877976c44958716a1e1fbcfd, type: 3}
+  - {fileID: 21300000, guid: 2f232b3698827824abc1d3f6756caed1, type: 3}
+  - {fileID: 21300000, guid: 829a65560d38bed40b266db0e5342806, type: 3}
+  - {fileID: 21300000, guid: 68d0c997d231b764e98031a8d3c44d41, type: 3}
+  - {fileID: 21300000, guid: 5a642268728d20c4fb018695697e8aff, type: 3}
+  - {fileID: 21300000, guid: 13b1f5685c6983c4a8869f85fac57465, type: 3}
+  - {fileID: 21300000, guid: 48e62588361f1c14ba51515a8e1c1424, type: 3}
+  - {fileID: 21300000, guid: a3b02e795e1a8824c80af1c5f0d92960, type: 3}
+  - {fileID: 21300000, guid: 6714b24a279ec784c8907c68f02ddd39, type: 3}
+  - {fileID: 21300000, guid: 5a069bbaaaf689b4ea14e9b4d0eb96e8, type: 3}
+  - {fileID: 21300000, guid: 1e016a0bc7fdca14f9374f4026dfe829, type: 3}
+  - {fileID: 21300000, guid: e21398fce51d97b40816cb101e7df70a, type: 3}
+  - {fileID: 21300000, guid: faee6b2e492a4444b8ebf98e2628a4d0, type: 3}
+  - {fileID: 21300000, guid: 256c043e9a5e1f94e97db499b8a189bb, type: 3}
+  - {fileID: 21300000, guid: 9807dadff6c94ce438f78014376b0961, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - popup_lock_button-b
+  - room_drawer
+  - room_drawer-open
+  - room_lock
+  - popup_prop-b
+  - room_bg
+  - popup_prop-r
+  - popup_lock_button-r
+  - popup_prop-g
+  - popup_lock_button-g
+  - popup_lock
+  - popup_drawer
+  - room_door
+  - popup_bg
+  - popup_prop-y
+  - popup_lock_button-y
+  - room_door-open
+  - popup_key
+  m_Tag: Game
+  m_IsVariant: 0

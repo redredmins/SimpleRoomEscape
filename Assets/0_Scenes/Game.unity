@@ -1000,8 +1000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e21a51546fb34408657267073a0d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeDoorSprite: {fileID: 21300000, guid: 5a069bbaaaf689b4ea14e9b4d0eb96e8, type: 3}
-  openDoorSprite: {fileID: 21300000, guid: 256c043e9a5e1f94e97db499b8a189bb, type: 3}
+  openSprite: {fileID: 21300000, guid: 256c043e9a5e1f94e97db499b8a189bb, type: 3}
+  closeSprite: {fileID: 21300000, guid: 5a069bbaaaf689b4ea14e9b4d0eb96e8, type: 3}
+  doorName: "\uBC29\uBB38"
+  keyName: Item-Key_111
 --- !u!1 &1021186445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1038,8 @@ MonoBehaviour:
   itemSlotPrefab: {fileID: 6160186024608280734, guid: 90ed9c9749e72de4a95c0ceaafe47f76,
     type: 3}
   txtNotice: {fileID: 1582881755}
+  doors:
+  - {fileID: 996461521}
 --- !u!4 &1021186447
 Transform:
   m_ObjectHideFlags: 0
@@ -1063,7 +1067,7 @@ GameObject:
   - component: {fileID: 1056311447}
   - component: {fileID: 1056311449}
   m_Layer: 5
-  m_Name: Item-Key
+  m_Name: Item-Key_111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1574,8 +1578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db32a8a07336db04198847f9f842f783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openDrawerSprite: {fileID: 21300000, guid: fa7eef91bd342bb408b5afca46658288, type: 3}
-  closeDrawerSprite: {fileID: 21300000, guid: 43b70df07eec0c84e83f1df7a0f2d4d7, type: 3}
+  openSprite: {fileID: 21300000, guid: fa7eef91bd342bb408b5afca46658288, type: 3}
+  closeSprite: {fileID: 21300000, guid: 43b70df07eec0c84e83f1df7a0f2d4d7, type: 3}
   combiLock: {fileID: 1930633581}
   drawerPopup: {fileID: 321182119}
 --- !u!1 &1372669636
@@ -2113,8 +2117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db32a8a07336db04198847f9f842f783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openDrawerSprite: {fileID: 21300000, guid: fa7eef91bd342bb408b5afca46658288, type: 3}
-  closeDrawerSprite: {fileID: 21300000, guid: 43b70df07eec0c84e83f1df7a0f2d4d7, type: 3}
+  openSprite: {fileID: 21300000, guid: fa7eef91bd342bb408b5afca46658288, type: 3}
+  closeSprite: {fileID: 21300000, guid: 43b70df07eec0c84e83f1df7a0f2d4d7, type: 3}
   combiLock: {fileID: 0}
   drawerPopup: {fileID: 870950440}
 --- !u!1 &1761745861

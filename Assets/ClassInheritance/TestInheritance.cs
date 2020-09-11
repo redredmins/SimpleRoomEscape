@@ -3,9 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TestInheritance : MonoBehaviour
-{
-    
+{   
     void Start()
+    {
+        IArchor[] archors = new IArchor[2];
+
+        Orc orc = new Orc("오크 궁수", "옼!", 100);
+        Hero hero = new Hero();
+
+        archors[0] = orc;
+        archors[1] = hero;
+
+        foreach (var archor in archors)
+        {
+            archor.ShootBow();
+        }
+
+        IWalkable[] walkers = new IWalkable[2];
+
+        Troll troll = new Troll("걷는 트롤", 30);
+
+        walkers[0] = hero;
+        walkers[1] = troll;
+
+        foreach (var walker in walkers)
+        {
+            walker.Walk();
+            Debug.Log("걸어온 거리 : " + walker.walkedDistance);
+        }
+    }
+
+    void Test()
     {
         Orc orc = new Orc("지나가는 오크", "옼! 옼!", 10);
         Troll troll = new Troll("서있는 트롤", 100);

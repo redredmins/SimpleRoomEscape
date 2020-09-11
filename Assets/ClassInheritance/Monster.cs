@@ -39,7 +39,7 @@ public abstract class Monster // 추상 클래스
 
 }
 
-public class Orc : Monster
+public class Orc : Monster, IArchor
 {
     int defence;
 
@@ -68,11 +68,27 @@ public class Orc : Monster
         Debug.Log(sleepSound);
     }
 
+    public void ShootBow()
+    {
+        Debug.Log("오크는 활을 따닷! 따닷! 쏜다!");
+    }
 
 }
 
-public class Troll : Monster
+public sealed class Troll : Monster, IWalkable
 {
+    // sealed : 더이상 상속하지 못하게 만드는 한정자
+
+    public int walkedDistance
+    {
+        get { return 1; }
+    }
+
+    public void Walk()
+    {
+        Debug.Log("트롤은 터덜터덜 걷는다.");
+    }
+
     public Troll(string name, int hp) : base(name)
     {
         this.hp = hp;
@@ -92,5 +108,13 @@ public class Troll : Monster
     public override void Sleep(string sleepSound)
     {
         Debug.Log(sleepSound + " Zzzzz...");
+    }
+}
+
+public class KingTroll // : Troll
+{
+    public KingTroll(string name, int hp) // : base(name, hp)
+    {
+
     }
 }

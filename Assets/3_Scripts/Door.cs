@@ -2,32 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : OpenableProp, IClickable
 {
     // - 문 : 열쇠(아이템)가 있으면 문이 열리고, 없으면 없다고 텍스트(UI)로 띄워주기
-
-    public Sprite closeDoorSprite;
-    public Sprite openDoorSprite;
-
-    SpriteRenderer renderer;
-    //GameManager manager;
     
+    public string doorName;
+    public string keyName;
+    public bool hasKey { get; private set; }
+
 
     // void OnEnable() // 주로 초기화 코드를 작성
 
-    void Start() // 초기화
+    protected override void Start() // 초기화
     {
         //manager = GameManager.Manager; // 캐싱(최적화)
 
-        renderer = GetComponent<SpriteRenderer>();
-        renderer.sprite = closeDoorSprite;
+        base.Start();
+
+        Close();
+        hasKey = false;
     }
 
-    public void ClickDoor(bool hasKey)
+    public bool SetHasKey(string gotKey)
+    {
+        if (keyName == gotKey)
+        {
+            hasKey = true;
+            GameManager.Manager.ShowNotice(doorName + "의 열쇠를 얻었습니다.");
+        }
+
+        return hasKey;
+    }
+
+    public void OnClick()
     {
         if (hasKey == true)
         {
-            renderer.sprite = openDoorSprite;
+            Open();
+            GameManager.Manager.ShowEscape();
         }
         else
         {

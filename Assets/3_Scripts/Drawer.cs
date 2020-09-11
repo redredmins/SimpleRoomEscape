@@ -2,18 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drawer : MonoBehaviour
+public class Drawer : OpenableProp, IClickable
 {
     // - 서랍장 : 자물쇠가 있는 서랍장이면 안 열리고, 잠겼다고 알림.
     //           자물쇠 없으면 열리면서 서랍장 팝업이 뜸.
 
-    public Sprite openDrawerSprite;
-    public Sprite closeDrawerSprite;
     public CombiLock combiLock;
-
     public GameObject drawerPopup;
-
-    SpriteRenderer renderer;
 
     int curLockMessage = 0;
     string[] lockMessages = new string[3]
@@ -24,10 +19,10 @@ public class Drawer : MonoBehaviour
     };
 
     
-    void Start()
+    protected override void Start()
     {
-        renderer = GetComponent<SpriteRenderer>();
-        renderer.sprite = closeDrawerSprite;
+        base.Start();
+        Close();
 
         if (drawerPopup != null)
         {
@@ -35,7 +30,7 @@ public class Drawer : MonoBehaviour
         }
     }
 
-    public void ClickDrawer()
+    public void OnClick()
     {
         // (자물쇠가 있고) && (자물쇠가 잠겨있으면) => 잠긴 상태
         if (combiLock != null && combiLock.IsLock == true)
@@ -46,7 +41,7 @@ public class Drawer : MonoBehaviour
         else
         {
             GameManager.Manager.ShowNotice("");
-            renderer.sprite = openDrawerSprite;
+            Open();
 
             SetPopupOn(true);
         }
@@ -62,6 +57,6 @@ public class Drawer : MonoBehaviour
     {
         SetPopupOn(false);
 
-        renderer.sprite = closeDrawerSprite;
+        Close();
     }
 }
